@@ -1,8 +1,8 @@
 <?php
 
+require_once "Vozilo.php";
+class Polaznik extends Vozilo {
 
-
-class Polaznik {
 
     private array $ime = [];
     private array $email = [];
