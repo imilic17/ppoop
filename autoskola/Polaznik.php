@@ -44,6 +44,7 @@ class Polaznik {
 
     public function ukloniInstruktora($imeInstruktora) {
         if (array_key_exists($imeInstruktora, $this->instruktori)) {
+            
             unset($this->instruktori[$imeInstruktora]);
             return true;
         }

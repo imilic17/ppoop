@@ -16,7 +16,7 @@
 
         
 
-        public function __construct($marka, $marka, $cijenaPosatu){
+        public function __construct($marka, $model, $cijenaPosatu){
             $this->marka = $marka;
             $this->model = $model;
             $this->godiste = $godiste;
