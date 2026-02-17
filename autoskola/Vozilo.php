@@ -27,7 +27,7 @@ class Vozilo{
         return $this->marka." ".$this->model."(".$this->godiste.") | ".$this->cijenaPoSatu." €/sat";
     }
     public function jeNovo(){
-        if($godiste >= 2024){
+        if($this->godiste >= 2024){
             return true;
         }
         return false;
