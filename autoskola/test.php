@@ -1,0 +1,1 @@
+<?php require_once 'Vozilo.php'; require_once 'Kamion.php'; require_once 'Polaznik.php'; // require_once 'Autoskola.php'; // Ako radiš bonus // Kreiraj barem 3 vozila i 2 kamiona // Kreiraj barem 2 polaznika s instruktorima // Demonstriraj sve metode // Primjer: $v1 = new Vozilo("Volkswagen", "Golf 8", 2023, 35); echo $v1->getInfo(); // ... ostatak testiranja ?>
