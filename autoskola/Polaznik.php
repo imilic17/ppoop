@@ -50,6 +50,43 @@ class Polaznik
         }
 }
 
+public function prikaziInstruktore()
+{
+    $rezultat = [];
+
+    foreach ($this->instruktori as $instruktor) {
+        $vozilo = $instruktor['vozilo'];
+        $rezultat[] = "{$instruktor['ime']} - {$vozilo->marka} {$vozilo->model}";
+    }
+
+    return $rezultat;
+}
+
+
+public function brojInstruktora()
+    {
+        return count($this->instruktori);
+    }
+
+    public function najskupljiSat()
+    {
+        if (empty($this->instruktori)) {
+            return 0;
+        }
+
+        $max = 0;
+
+        foreach ($this->instruktori as $instruktor) {
+            $cijena = $instruktor['vozilo']->getCijenaPoSatu();
+            if ($cijena > $max) {
+                $max = $cijena;
+            }
+        }
+
+        return $max;
+    }
+
+
 
 }
 
