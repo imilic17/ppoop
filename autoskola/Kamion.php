@@ -21,6 +21,11 @@ class kamion extends Vozilo
         ."{$this->nosivost}t, {$this->brojOsovina} osovina";
     }
 
-    
+    public function troskoviPolaganja()
+    {
+        return ($this->getCijenaPoSatu() * 40) + ($this->nosivost * 100);
+    }
 
 }
+
+?>
