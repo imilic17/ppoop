@@ -37,6 +37,20 @@ class Polaznik
             'vozilo' => $vozilo
         ];
     }
+
+    public function ukloniInstruktora($imeInstruktora)
+    {
+        foreach ($this->instruktori as $index => $instruktor) {
+            if ($instruktor['ime'] === $imeInstruktora) {
+                unset($this->instruktori[$index]);
+                // reindexiranje niza
+                $this->instruktori = array_values($this->instruktori);
+                return;
+            }
+        }
+}
+
+
 }
 
 
