@@ -18,11 +18,12 @@ class Vozilo {
         $this->marka = $marka;
         $this->model = $model;
         $this->godiste = $godiste;
+        $this->cijenaPoSatu = $cijenaPoSatu;
 
         if ($cijenaPoSatu <= 0){
             $this->cijenaPoSatu = 30;
         } else {
-            $this->cijenaPoSatu = $cijena;
+            $this->cijenaPoSatu = $cijenaPoSatu;
         }
     }
 
@@ -37,7 +38,7 @@ class Vozilo {
     }
 
     public function getInfo(){
-        return "$this->marka $this->model ($this->godiste) | {$this->getCijenaPoSatu}";
+        return "$this->marka $this->model ($this->godiste) | {$this->cijenaPoSatu}";
     }
 
     public function jeNovo(){
