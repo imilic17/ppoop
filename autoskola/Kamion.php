@@ -15,5 +15,12 @@ class kamion extends Vozilo
         $this->brojOsovina = $brojOsovina;
     }
 
+    public function getInfo() {
+        return "{$this->marka} {$this->model} ({$this->godiste}) | "
+        ."{$this->getCijenaPoSatu()} €/sat | "
+        ."{$this->nosivost}t, {$this->brojOsovina} osovina";
+    }
+
     
+
 }
