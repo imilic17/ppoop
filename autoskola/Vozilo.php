@@ -41,3 +41,5 @@ class vozilo
         return $this->godiste >= 2024;
     }
 }
+
+?>
