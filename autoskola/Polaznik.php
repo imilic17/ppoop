@@ -31,6 +31,7 @@ class Polaznik{
           $this->instruktori = array_values($this->instruktori);
         }
     }
+    return false;
 }
 public function prikaziInstruktore(){
 $rezultat = [];
