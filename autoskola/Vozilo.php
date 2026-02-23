@@ -34,17 +34,21 @@ class Vozilo {
     }
 
     public function getCijenaPoSatu(){
-        return $this->getCijenaPoSatu;
+        return $this->cijenaPoSatu;
     }
 
     public function getInfo(){
         return "$this->marka $this->model ($this->godiste) | {$this->cijenaPoSatu}";
     }
 
-    public function jeNovo(){
-        return $this->godiste >= 2024;
-    }
-}
+    public function jeNovo($godiste){
+        if ($this->godiste >= 2024){
+            return "true";
+        }else{
+            return "false";
+        }
+        } }
+
 
 ?>
 </body>
