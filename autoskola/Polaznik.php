@@ -21,17 +21,22 @@ class Polaznik{
         }
     }
     $this->instruktori[]=$imeInstruktora;
+    $this->instruktori[]=$vozilo;
     return true;
     }
+    
     public function ukloniInstruktora($imeInstruktora){
     foreach($this->instruktori as $index=>$imeInstruktora){
-        if($imeInstruktora->ime === $ime){
+        if($imeInstruktora->naziv === $imeInstruktora){
             unset ($this ->instruktori[$index]);
             $this->instruktori ==array_values($this->instruktori);
             return true;
         }
     }
     return false;
+}
+public function prikaziInstruktore(){
+    return $this->imeInstruktora . " - ". $this->marka." ". $this->model;
 }
 }
 ?>
