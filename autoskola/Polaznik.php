@@ -41,7 +41,7 @@ $rezultat = [];
   return $rezultat;}
 
  /* public function brojInstruktora(){
-
+d
   }
 
   public function najskupljiSat(){
