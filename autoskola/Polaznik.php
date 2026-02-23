@@ -31,7 +31,6 @@ class Polaznik{
           $this->instruktori = array_values($this->instruktori);
         }
     }
-    return false;
 }
 public function prikaziInstruktore(){
 $rezultat = [];
@@ -41,7 +40,7 @@ $rezultat = [];
   return $rezultat;}
 
  /* public function brojInstruktora(){
-d
+
   }
 
   public function najskupljiSat(){
