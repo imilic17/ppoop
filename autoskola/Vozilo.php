@@ -25,10 +25,10 @@
         {
             return "marka: " . $this->marka . ", model: " . $this->model . ", godiste: " . $this->godiste . ", cijena po satu: " . $this->cijenaposatu;
         }
-
+        
         public function jeNovo()
         {
-            if ($godiste>=2024){
+            if ($this->godiste>=2024){
                 return $this->godiste;
             }else{
                 return false;
@@ -36,10 +36,10 @@
         }
 
         private $cijena;  
-        public function getCij() { 
+        public function getCijenaPoSatu() { 
             return $this->cijena; 
         } 
-        public function setCij($cijena) { 
+        public function setCijenaPoSatu($cijena) { 
             if ($cijena > 0 ) { 
             $this->dob = $dob; 
             return true; 

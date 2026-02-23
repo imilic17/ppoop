@@ -1,7 +1,8 @@
 <?php require_once 'Vozilo.php';
 
 $vozilo = new Vozilo("Volkswagen", "Golf 8", 2023, 35); 
-echo $vozilo->getInfo(); 
+
+
 // Volkswagen Golf 8 (2023) | 35 €/sat 
 echo $vozilo->getCijenaPoSatu(); 
 // 35 
@@ -12,8 +13,11 @@ $vozilo->setCijenaPoSatu(-10);
 echo $vozilo->getCijenaPoSatu(); 
 // 35 (ostalo isto) 
 $novo = new Vozilo("Toyota", "Yaris", 2025, 40); 
-echo $novo->jeNovo(); 
+
+echo "<br>";
 // true (2025 >= 2024) 
 $greska = new Vozilo("Opel", "Corsa", 2020, -5); 
 echo $greska->getCijenaPoSatu(); 
+echo $vozilo->getInfo(); 
+
 // 30 (postavljeno na default)
