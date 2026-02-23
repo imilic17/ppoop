@@ -12,31 +12,41 @@ class Polaznik{
         return $this->ime;
     }
     public function getEmail(){
-        return $this->ime;
+        return $this->email;
     }
     public function dodajInstruktora($imeInstruktora,$vozilo){
        foreach($this->instruktori as $i){
-        if($i->ime === $imeInstruktora->ime){
-            return false;
-        }
-    }
-    $this->instruktori[]=$imeInstruktora;
-    $this->instruktori[]=$vozilo;
+      if($i['ime'] === $imeInstruktora){
+          return false;
+      }
+  }
+  $this->instruktori[]=['ime'=>$imeInstruktora, 'vozilo'=>$vozilo];
     return true;
     }
     
     public function ukloniInstruktora($imeInstruktora){
-    foreach($this->instruktori as $index=>$imeInstruktora){
-        if($imeInstruktora->naziv === $imeInstruktora){
-            unset ($this ->instruktori[$index]);
-            $this->instruktori ==array_values($this->instruktori);
-            return true;
+    foreach($this->instruktori as $index=>$i){
+      if($i['ime'] === $imeInstruktora){
+          unset($this->instruktori[$index]);
+          $this->instruktori = array_values($this->instruktori);
         }
     }
     return false;
 }
 public function prikaziInstruktore(){
-    return $this->imeInstruktora . " - ". $this->marka." ". $this->model;
-}
+$rezultat = [];
+  foreach($this->instruktori as $i){
+      $rezultat[] = $i['ime'] . " - " . $i['vozilo']->marka . " " . $i['vozilo']->model;
+  }
+  return $rezultat;}
+
+ /* public function brojInstruktora(){
+
+  }
+
+  public function najskupljiSat(){
+
+  }*/
+
 }
 ?>

@@ -39,13 +39,16 @@
     $polaznik->dodajInstruktora("Ivan Ivić", $v1);
     $polaznik->dodajInstruktora("Ana Anić", $v2);
     $polaznik->dodajInstruktora("Pero Perić", $kamion);
+    echo "<br>";
     //echo $polaznik->brojInstruktora(); // 3
+    echo "<br>";
     print_r($polaznik->prikaziInstruktore());// ["Ivan Ivić - Volkswagen Golf 8", "Ana Anić - Toyota Yaris", "Pero Perić - MAN TGX"]
    // echo $polaznik->najskupljiSat(); // 50 (MAN TGX ima 50 €/sat)
     $polaznik->ukloniInstruktora("Ana Anić");
     //echo $polaznik->brojInstruktora(); // 2
+    echo "<br>";
     //echo $polaznik->najskupljiSat(); // 50
-
+    echo "<br>";
     ?>
 </body>
 </html>
